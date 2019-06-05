@@ -76,7 +76,7 @@
             this.panelSettings.ForeColor = System.Drawing.Color.Magenta;
             this.panelSettings.Location = new System.Drawing.Point(145, 12);
             this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(611, 205);
+            this.panelSettings.Size = new System.Drawing.Size(512, 205);
             this.panelSettings.TabIndex = 3;
             this.panelSettings.Visible = false;
             // 
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(768, 229);
+            this.ClientSize = new System.Drawing.Size(659, 229);
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSettings);
