@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tabPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // tabPanel
+            // 
+            this.tabPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tabPanel.AutoScroll = true;
+            this.tabPanel.Location = new System.Drawing.Point(0, 0);
+            this.tabPanel.Name = "tabPanel";
+            this.tabPanel.Size = new System.Drawing.Size(200, 441);
+            this.tabPanel.TabIndex = 0;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(602, 286);
+            this.ClientSize = new System.Drawing.Size(768, 443);
+            this.Controls.Add(this.tabPanel);
             this.Name = "Main";
             this.Text = "Instagram Downloader - @AmirRoohi2K";
             this.ResumeLayout(false);
@@ -42,6 +54,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel tabPanel;
     }
 }
 
