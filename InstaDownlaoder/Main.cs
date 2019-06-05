@@ -26,5 +26,15 @@ namespace InstaDownlaoder
         {
             panelSettings.Visible = true;
         }
+
+        private void EnableDarkTheme()
+        {
+
+        }
+
+        private void EnableLightTheme()
+        {
+
+        }
     }
 }
