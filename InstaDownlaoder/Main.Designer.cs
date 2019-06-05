@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tabPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.ClientSize = new System.Drawing.Size(768, 443);
             this.Controls.Add(this.tabPanel);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "Instagram Downloader - @AmirRoohi2K";
             this.ResumeLayout(false);
