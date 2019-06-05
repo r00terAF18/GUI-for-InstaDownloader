@@ -16,5 +16,10 @@ namespace InstaDownlaoder
         {
             InitializeComponent();
         }
+
+        private void TabPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
