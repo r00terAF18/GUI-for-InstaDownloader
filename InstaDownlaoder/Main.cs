@@ -16,5 +16,15 @@ namespace InstaDownlaoder
         {
             InitializeComponent();
         }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            panelSettings.Visible = false;
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            panelSettings.Visible = true;
+        }
     }
 }
