@@ -86,6 +86,9 @@ namespace InstaDownlaoder
             btnGitHub.BackColor = Color.FromArgb(45, 45, 48);
             btnInstagram.BackColor = Color.FromArgb(45, 45, 48);
             btnTwitter.BackColor = Color.FromArgb(45, 45, 48);
+            btnDownload.BackColor = Color.FromArgb(45, 45, 48);
+            btnDownload.FlatAppearance.BorderColor = Color.Magenta;
+
             txtUrl.BackColor = Color.FromArgb(45, 45, 48);
             txtName.BackColor = Color.FromArgb(45, 45, 48);
 
@@ -104,6 +107,8 @@ namespace InstaDownlaoder
             btnTwitter.BackColor = Color.White;
             btnInstagram.BackColor = Color.White;
             btnGitHub.BackColor = Color.White;
+            btnDownload.BackColor = Color.White;
+            btnDownload.FlatAppearance.BorderColor = Color.Black;
 
             txtName.BackColor = Color.White;
             txtUrl.BackColor = Color.White;
@@ -151,6 +156,12 @@ namespace InstaDownlaoder
                 light = true;
                 dark = false;
             }
+        }
+
+        private void TxtUrl_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.All;
+            txtUrl.Text = e.Data.GetData(DataFormats.Text).ToString();
         }
 
         private void RdnBtnDark_CheckedChanged(object sender, EventArgs e)
