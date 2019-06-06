@@ -40,13 +40,13 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.checkBoxVerbose = new System.Windows.Forms.CheckBox();
+            this.checkBoxQuit = new System.Windows.Forms.CheckBox();
+            this.btnDownload = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDownload = new System.Windows.Forms.Button();
-            this.checkBoxQuit = new System.Windows.Forms.CheckBox();
-            this.checkBoxVerbose = new System.Windows.Forms.CheckBox();
             this.panelSettings.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -205,6 +205,40 @@
             this.mainPanel.TabIndex = 8;
             this.mainPanel.Visible = false;
             // 
+            // checkBoxVerbose
+            // 
+            this.checkBoxVerbose.AutoSize = true;
+            this.checkBoxVerbose.ForeColor = System.Drawing.Color.Orchid;
+            this.checkBoxVerbose.Location = new System.Drawing.Point(106, 125);
+            this.checkBoxVerbose.Name = "checkBoxVerbose";
+            this.checkBoxVerbose.Size = new System.Drawing.Size(90, 25);
+            this.checkBoxVerbose.TabIndex = 7;
+            this.checkBoxVerbose.Text = "Verbose";
+            this.checkBoxVerbose.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxQuit
+            // 
+            this.checkBoxQuit.AutoSize = true;
+            this.checkBoxQuit.ForeColor = System.Drawing.Color.Orchid;
+            this.checkBoxQuit.Location = new System.Drawing.Point(23, 125);
+            this.checkBoxQuit.Name = "checkBoxQuit";
+            this.checkBoxQuit.Size = new System.Drawing.Size(61, 25);
+            this.checkBoxQuit.TabIndex = 6;
+            this.checkBoxQuit.Text = "Quit";
+            this.checkBoxQuit.UseVisualStyleBackColor = true;
+            // 
+            // btnDownload
+            // 
+            this.btnDownload.AutoSize = true;
+            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload.ForeColor = System.Drawing.Color.Orchid;
+            this.btnDownload.Location = new System.Drawing.Point(405, 159);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(99, 33);
+            this.btnDownload.TabIndex = 5;
+            this.btnDownload.Text = "Download";
+            this.btnDownload.UseVisualStyleBackColor = true;
+            // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(72, 58);
@@ -241,40 +275,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "URL";
             // 
-            // btnDownload
-            // 
-            this.btnDownload.AutoSize = true;
-            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownload.ForeColor = System.Drawing.Color.Orchid;
-            this.btnDownload.Location = new System.Drawing.Point(405, 159);
-            this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(99, 33);
-            this.btnDownload.TabIndex = 5;
-            this.btnDownload.Text = "Download";
-            this.btnDownload.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxQuit
-            // 
-            this.checkBoxQuit.AutoSize = true;
-            this.checkBoxQuit.ForeColor = System.Drawing.Color.Orchid;
-            this.checkBoxQuit.Location = new System.Drawing.Point(23, 125);
-            this.checkBoxQuit.Name = "checkBoxQuit";
-            this.checkBoxQuit.Size = new System.Drawing.Size(61, 25);
-            this.checkBoxQuit.TabIndex = 6;
-            this.checkBoxQuit.Text = "Quit";
-            this.checkBoxQuit.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxVerbose
-            // 
-            this.checkBoxVerbose.AutoSize = true;
-            this.checkBoxVerbose.ForeColor = System.Drawing.Color.Orchid;
-            this.checkBoxVerbose.Location = new System.Drawing.Point(106, 125);
-            this.checkBoxVerbose.Name = "checkBoxVerbose";
-            this.checkBoxVerbose.Size = new System.Drawing.Size(90, 25);
-            this.checkBoxVerbose.TabIndex = 7;
-            this.checkBoxVerbose.Text = "Verbose";
-            this.checkBoxVerbose.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AllowDrop = true;
@@ -290,8 +290,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Instagram Downloader - @AmirRoohi2K";
-            this.Load += new System.EventHandler(this.Main_Load);
             this.panelSettings.ResumeLayout(false);
             this.panelSettings.PerformLayout();
             this.mainPanel.ResumeLayout(false);

@@ -22,7 +22,9 @@ namespace InstaDownlaoder
 
         private void checkApp()
         {
-            if (File.Exists(appPath))
+            char[] toTrim = "\"".ToCharArray();
+            string app = appPath.Trim(toTrim);
+            if (File.Exists(app))
             {
 
             }
