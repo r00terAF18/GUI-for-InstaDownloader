@@ -51,17 +51,25 @@ namespace InstaDownlaoder
         private void readSave()
         {
             StreamReader sw = new StreamReader(settings);
-            while (sw.ReadLine() != null)
+            if (sw.Read().Equals("Theme = \"Dark\""))
             {
-                if (sw.Read().Equals("Theme = \"Dark\""))
-                {
-                    EnableDarkTheme();
-                }
-                else if (sw.ReadLine().Equals("Theme = \"Light\""))
-                {
-                    EnableLightTheme();
-                }
+                EnableDarkTheme();
             }
+            else if (sw.ReadLine().Equals("Theme = \"Light\""))
+            {
+                EnableLightTheme();
+            }
+            //while (sw.ReadLine() != null)
+            //{
+            //    if (sw.Read().Equals("Theme = \"Dark\""))
+            //    {
+            //        EnableDarkTheme();
+            //    }
+            //    else if (sw.ReadLine().Equals("Theme = \"Light\""))
+            //    {
+            //        EnableLightTheme();
+            //    }
+            //}
             sw.Close();
         }
 
