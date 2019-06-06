@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>insta.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>InstaDownlaoder.Program</StartupObject>
@@ -87,15 +88,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="tools 64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Settings.png" />
     <None Include="Images\Home.png" />
-    <Content Include="insta.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

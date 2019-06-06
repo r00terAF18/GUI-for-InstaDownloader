@@ -95,13 +95,11 @@
             // rdnBtnDark
             // 
             this.rdnBtnDark.AutoSize = true;
-            this.rdnBtnDark.Checked = true;
             this.rdnBtnDark.ForeColor = System.Drawing.Color.Orchid;
             this.rdnBtnDark.Location = new System.Drawing.Point(110, 17);
             this.rdnBtnDark.Name = "rdnBtnDark";
             this.rdnBtnDark.Size = new System.Drawing.Size(64, 25);
             this.rdnBtnDark.TabIndex = 1;
-            this.rdnBtnDark.TabStop = true;
             this.rdnBtnDark.Text = "Dark";
             this.rdnBtnDark.UseVisualStyleBackColor = true;
             this.rdnBtnDark.CheckedChanged += new System.EventHandler(this.RdnBtnDark_CheckedChanged);

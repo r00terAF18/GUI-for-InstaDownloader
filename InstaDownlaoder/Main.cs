@@ -36,13 +36,13 @@ namespace InstaDownlaoder
             StreamWriter sw = new StreamWriter(settings);
             if (dark)
             {
-                string stringToWrite = "[Config]\nTheme = \"Dark\"";
+                string stringToWrite = "Theme = \"Dark\"";
                 sw.Write(stringToWrite);
                 sw.Close();
             }
             else if (light)
             {
-                string stringToWrite = "[Config]\nTheme = \"Light\"";
+                string stringToWrite = "Theme = \"Light\"";
                 sw.Write(stringToWrite);
                 sw.Close();
             }
@@ -51,20 +51,25 @@ namespace InstaDownlaoder
         private void readSave()
         {
             StreamReader sw = new StreamReader(settings);
-            if (sw.ReadLine().Equals("[Config]\nTheme = \"Dark\""))
+            while (sw.ReadLine() != null)
             {
-                EnableDarkTheme();
-            }
-            else if (sw.ReadLine().Equals("[Config]\nTheme = \"Light\""))
-            {
-                EnableLightTheme();
+                if (sw.Read().Equals("Theme = \"Dark\""))
+                {
+                    EnableDarkTheme();
+                }
+                else if (sw.ReadLine().Equals("Theme = \"Light\""))
+                {
+                    EnableLightTheme();
+                }
             }
             sw.Close();
         }
 
         public Main()
         {
+            checkForSettingsFile();
             InitializeComponent();
+            readSave();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
