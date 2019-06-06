@@ -32,9 +32,9 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.panelSettings = new System.Windows.Forms.Panel();
-            this.Theme = new System.Windows.Forms.Label();
-            this.rdnBtnDark = new System.Windows.Forms.RadioButton();
             this.rdnBtnLight = new System.Windows.Forms.RadioButton();
+            this.rdnBtnDark = new System.Windows.Forms.RadioButton();
+            this.Theme = new System.Windows.Forms.Label();
             this.panelSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Image = global::InstaDownlaoder.Properties.Resources.home;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.Location = new System.Drawing.Point(12, 12);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(127, 94);
@@ -59,7 +59,7 @@
             this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Image = global::InstaDownlaoder.Properties.Resources.tools_64;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.Location = new System.Drawing.Point(12, 123);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(127, 94);
@@ -80,14 +80,15 @@
             this.panelSettings.TabIndex = 3;
             this.panelSettings.Visible = false;
             // 
-            // Theme
+            // rdnBtnLight
             // 
-            this.Theme.AutoSize = true;
-            this.Theme.Location = new System.Drawing.Point(19, 17);
-            this.Theme.Name = "Theme";
-            this.Theme.Size = new System.Drawing.Size(61, 21);
-            this.Theme.TabIndex = 0;
-            this.Theme.Text = "Theme";
+            this.rdnBtnLight.AutoSize = true;
+            this.rdnBtnLight.Location = new System.Drawing.Point(196, 17);
+            this.rdnBtnLight.Name = "rdnBtnLight";
+            this.rdnBtnLight.Size = new System.Drawing.Size(66, 25);
+            this.rdnBtnLight.TabIndex = 2;
+            this.rdnBtnLight.Text = "Light";
+            this.rdnBtnLight.UseVisualStyleBackColor = true;
             // 
             // rdnBtnDark
             // 
@@ -101,15 +102,14 @@
             this.rdnBtnDark.Text = "Dark";
             this.rdnBtnDark.UseVisualStyleBackColor = true;
             // 
-            // rdnBtnLight
+            // Theme
             // 
-            this.rdnBtnLight.AutoSize = true;
-            this.rdnBtnLight.Location = new System.Drawing.Point(196, 17);
-            this.rdnBtnLight.Name = "rdnBtnLight";
-            this.rdnBtnLight.Size = new System.Drawing.Size(66, 25);
-            this.rdnBtnLight.TabIndex = 2;
-            this.rdnBtnLight.Text = "Light";
-            this.rdnBtnLight.UseVisualStyleBackColor = true;
+            this.Theme.AutoSize = true;
+            this.Theme.Location = new System.Drawing.Point(19, 17);
+            this.Theme.Name = "Theme";
+            this.Theme.Size = new System.Drawing.Size(61, 21);
+            this.Theme.TabIndex = 0;
+            this.Theme.Text = "Theme";
             // 
             // Main
             // 

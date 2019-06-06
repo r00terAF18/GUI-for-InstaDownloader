@@ -29,7 +29,7 @@ namespace InstaDownlaoder
 
         private void EnableDarkTheme()
         {
-
+            
         }
 
         private void EnableLightTheme()
