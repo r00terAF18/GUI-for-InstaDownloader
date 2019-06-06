@@ -45,6 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDownload = new System.Windows.Forms.Button();
+            this.checkBoxQuit = new System.Windows.Forms.CheckBox();
+            this.checkBoxVerbose = new System.Windows.Forms.CheckBox();
             this.panelSettings.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -189,6 +191,8 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.checkBoxVerbose);
+            this.mainPanel.Controls.Add(this.checkBoxQuit);
             this.mainPanel.Controls.Add(this.btnDownload);
             this.mainPanel.Controls.Add(this.txtName);
             this.mainPanel.Controls.Add(this.txtUrl);
@@ -241,12 +245,35 @@
             // 
             this.btnDownload.AutoSize = true;
             this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload.ForeColor = System.Drawing.Color.Orchid;
             this.btnDownload.Location = new System.Drawing.Point(405, 159);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(99, 33);
             this.btnDownload.TabIndex = 5;
             this.btnDownload.Text = "Download";
             this.btnDownload.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxQuit
+            // 
+            this.checkBoxQuit.AutoSize = true;
+            this.checkBoxQuit.ForeColor = System.Drawing.Color.Orchid;
+            this.checkBoxQuit.Location = new System.Drawing.Point(23, 125);
+            this.checkBoxQuit.Name = "checkBoxQuit";
+            this.checkBoxQuit.Size = new System.Drawing.Size(61, 25);
+            this.checkBoxQuit.TabIndex = 6;
+            this.checkBoxQuit.Text = "Quit";
+            this.checkBoxQuit.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxVerbose
+            // 
+            this.checkBoxVerbose.AutoSize = true;
+            this.checkBoxVerbose.ForeColor = System.Drawing.Color.Orchid;
+            this.checkBoxVerbose.Location = new System.Drawing.Point(106, 125);
+            this.checkBoxVerbose.Name = "checkBoxVerbose";
+            this.checkBoxVerbose.Size = new System.Drawing.Size(90, 25);
+            this.checkBoxVerbose.TabIndex = 7;
+            this.checkBoxVerbose.Text = "Verbose";
+            this.checkBoxVerbose.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -290,6 +317,8 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Button btnDownload;
+        private System.Windows.Forms.CheckBox checkBoxQuit;
+        private System.Windows.Forms.CheckBox checkBoxVerbose;
     }
 }
 

@@ -84,16 +84,32 @@ namespace InstaDownlaoder
             btnHome.BackColor = Color.FromArgb(45, 45, 48);
             btnSettings.BackColor = Color.FromArgb(45, 45, 48);
             btnGitHub.BackColor = Color.FromArgb(45, 45, 48);
+            btnGitHub.FlatAppearance.BorderColor = Color.FromArgb(45, 45, 48);
             btnInstagram.BackColor = Color.FromArgb(45, 45, 48);
+            btnInstagram.FlatAppearance.BorderColor = Color.FromArgb(45, 45, 48);
             btnTwitter.BackColor = Color.FromArgb(45, 45, 48);
+            btnTwitter.FlatAppearance.BorderColor = Color.FromArgb(45, 45, 48);
+
             btnDownload.BackColor = Color.FromArgb(45, 45, 48);
-            btnDownload.FlatAppearance.BorderColor = Color.Magenta;
+            btnDownload.ForeColor = Color.Orchid;
+            btnDownload.FlatAppearance.BorderColor = Color.Orchid;
 
             txtUrl.BackColor = Color.FromArgb(45, 45, 48);
             txtName.BackColor = Color.FromArgb(45, 45, 48);
 
-            txtUrl.ForeColor = Color.Magenta;
-            txtName.ForeColor = Color.Magenta;
+            txtUrl.ForeColor = Color.Orchid;
+            txtName.ForeColor = Color.Orchid;
+
+            label1.ForeColor = Color.Orchid;
+            label2.ForeColor = Color.Orchid;
+            label3.ForeColor = Color.Orchid;
+            Theme.ForeColor = Color.Orchid;
+
+            rdnBtnDark.ForeColor = Color.Orchid;
+            rdnBtnLight.ForeColor = Color.Orchid;
+
+            checkBoxQuit.ForeColor = Color.Orchid;
+            checkBoxVerbose.ForeColor = Color.Orchid;
 
             rdnBtnDark.Checked = true;
             writeSave();
@@ -105,16 +121,32 @@ namespace InstaDownlaoder
             btnHome.BackColor = Color.White;
             btnSettings.BackColor = Color.White;
             btnTwitter.BackColor = Color.White;
+            btnTwitter.FlatAppearance.BorderColor = Color.White;
             btnInstagram.BackColor = Color.White;
+            btnInstagram.FlatAppearance.BorderColor = Color.White;
             btnGitHub.BackColor = Color.White;
+            btnGitHub.FlatAppearance.BorderColor = Color.White;
+
             btnDownload.BackColor = Color.White;
-            btnDownload.FlatAppearance.BorderColor = Color.Black;
+            btnDownload.ForeColor = Color.Black;
+            btnDownload.FlatAppearance.BorderColor = Color.White;
 
             txtName.BackColor = Color.White;
             txtUrl.BackColor = Color.White;
 
             txtName.ForeColor = Color.Black;
             txtUrl.ForeColor = Color.Black;
+
+            label1.ForeColor = Color.Black;
+            label2.ForeColor = Color.Black;
+            label3.ForeColor = Color.Black;
+            Theme.ForeColor = Color.Black;
+
+            rdnBtnDark.ForeColor = Color.Black;
+            rdnBtnLight.ForeColor = Color.Black;
+
+            checkBoxQuit.ForeColor = Color.Black;
+            checkBoxVerbose.ForeColor = Color.Black;
 
             rdnBtnLight.Checked = true;
             writeSave();
