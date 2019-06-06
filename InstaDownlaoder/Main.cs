@@ -43,10 +43,6 @@ namespace InstaDownlaoder
             {
                 stringToWrite = "Theme = \"Light\"";
             }
-            else
-            {
-
-            }
             sw.Write(stringToWrite);
             sw.Close();
         }
@@ -54,23 +50,16 @@ namespace InstaDownlaoder
         private void readSave()
         {
             StreamReader sw = new StreamReader(settings);
-            string check = "";
-            while ((check = sw.ReadLine()) != null)
-            {
-                if (check.Equals("Theme = \"Dark\""))
-                {
-                    EnableDarkTheme();
-                }
-                else if (check.Equals("Theme = \"Light\""))
-                {
-                    EnableLightTheme();
-                }
-                else
-                {
-
-                }
-            }
+            string check = sw.ReadLine();
             sw.Close();
+            if (check.Equals("Theme = \"Dark\""))
+            {
+                EnableDarkTheme();
+            }
+            else if (check.Equals("Theme = \"Light\""))
+            {
+                EnableLightTheme();
+            }
         }
 
         public Main()
@@ -94,6 +83,7 @@ namespace InstaDownlaoder
             btnHome.BackColor = Color.FromArgb(45, 45, 48);
             btnSettings.BackColor = Color.FromArgb(45, 45, 48);
             rdnBtnDark.Checked = true;
+            writeSave();
         }
 
         private void EnableLightTheme()
@@ -102,6 +92,7 @@ namespace InstaDownlaoder
             btnHome.BackColor = Color.White;
             btnSettings.BackColor = Color.White;
             rdnBtnLight.Checked = true;
+            writeSave();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -117,14 +108,12 @@ namespace InstaDownlaoder
                 EnableDarkTheme();
                 dark = true;
                 light = false;
-                writeSave();
             }
             else if (rdnBtnLight.Checked)
             {
                 EnableLightTheme();
                 light = true;
                 dark = false;
-                writeSave();
             }
         }
 
@@ -135,14 +124,12 @@ namespace InstaDownlaoder
                 EnableDarkTheme();
                 dark = true;
                 light = false;
-                writeSave();
             }
             else if (rdnBtnLight.Checked)
             {
                 EnableLightTheme();
                 light = true;
                 dark = false;
-                writeSave();
             }
         }
     }
