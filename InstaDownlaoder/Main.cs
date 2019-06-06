@@ -17,6 +17,24 @@ namespace InstaDownlaoder
 
         bool light, dark;
         string settings = @"C:/Users/" + Environment.UserName + @"/AppData/Local/insta.config";
+        public string appPath = "instaDownloader_console.exe";
+
+        private void checkApp()
+        {
+            if (File.Exists(appPath))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Looks like my apps are not in the same directory, that is ok, just tell me where it is!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                OpenFileDialog findApp = new OpenFileDialog();
+                if (DialogResult.OK == findApp.ShowDialog())
+                {
+                    appPath = Path.GetFullPath(findApp.FileName);
+                }
+            }
+        }
 
         private void checkForSettingsFile()
         {
@@ -36,11 +54,11 @@ namespace InstaDownlaoder
             string stringToWrite = "";
             if (dark)
             {
-                stringToWrite = "Theme = \"Dark\"";
+                stringToWrite = "Theme = \"Dark\"\nApp Path = \""+ appPath +"\"";
             }
             else if (light)
             {
-                stringToWrite = "Theme = \"Light\"";
+                stringToWrite = "Theme = \"Light\"\nApp Path = \"" + appPath + "\"";
             }
             sw.Write(stringToWrite);
             sw.Close();
@@ -156,6 +174,7 @@ namespace InstaDownlaoder
         {
             checkForSettingsFile();
             readSave();
+            checkApp();
             mainPanel.Visible = true;
         }
 
