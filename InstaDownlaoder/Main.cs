@@ -15,20 +15,18 @@ namespace InstaDownlaoder
     public partial class Main : Form
     {
 
-        bool settingsFile, light, dark;
+        bool light, dark;
         string settings = @"C:/Users/" + Environment.UserName + @"/AppData/Local/insta.config";
 
         private void checkForSettingsFile()
         {
             if (!File.Exists(settings))
             {
-                settingsFile = false;
                 File.Create(settings);
-                settingsFile = true;
             }
             else
             {
-                settingsFile = true;
+
             }
         }
 
@@ -71,11 +69,13 @@ namespace InstaDownlaoder
         private void BtnHome_Click(object sender, EventArgs e)
         {
             panelSettings.Visible = false;
+            mainPanel.Visible = true;
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             panelSettings.Visible = true;
+            mainPanel.Visible = false;
         }
 
         private void EnableDarkTheme()
@@ -86,6 +86,12 @@ namespace InstaDownlaoder
             btnGitHub.BackColor = Color.FromArgb(45, 45, 48);
             btnInstagram.BackColor = Color.FromArgb(45, 45, 48);
             btnTwitter.BackColor = Color.FromArgb(45, 45, 48);
+            txtUrl.BackColor = Color.FromArgb(45, 45, 48);
+            txtName.BackColor = Color.FromArgb(45, 45, 48);
+
+            txtUrl.ForeColor = Color.Magenta;
+            txtName.ForeColor = Color.Magenta;
+
             rdnBtnDark.Checked = true;
             writeSave();
         }
@@ -98,6 +104,13 @@ namespace InstaDownlaoder
             btnTwitter.BackColor = Color.White;
             btnInstagram.BackColor = Color.White;
             btnGitHub.BackColor = Color.White;
+
+            txtName.BackColor = Color.White;
+            txtUrl.BackColor = Color.White;
+
+            txtName.ForeColor = Color.Black;
+            txtUrl.ForeColor = Color.Black;
+
             rdnBtnLight.Checked = true;
             writeSave();
         }
@@ -106,6 +119,7 @@ namespace InstaDownlaoder
         {
             checkForSettingsFile();
             readSave();
+            mainPanel.Visible = true;
         }
 
         private void BtnTwitter_Click(object sender, EventArgs e)
