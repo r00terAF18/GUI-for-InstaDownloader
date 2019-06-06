@@ -17,12 +17,12 @@ namespace InstaDownlaoder
     {
 
         bool light, dark;
-        string settings = @"C:/Users/" + Environment.UserName + @"/AppData/Local/insta.config";
-        public string appPath = "";
+        public string settings = @"C:/Users/" + Environment.UserName + @"/AppData/Local/insta.config";
+        public string appPath;
 
         private void checkApp()
         {
-            if (File.Exists("instaDownloader_console.exe"))
+            if (File.Exists(appPath))
             {
 
             }
@@ -33,6 +33,7 @@ namespace InstaDownlaoder
                 if (DialogResult.OK == findApp.ShowDialog())
                 {
                     appPath = Path.GetFullPath(findApp.FileName);
+                    writeSave();
                 }
                 else
                 {
@@ -85,7 +86,6 @@ namespace InstaDownlaoder
             }
             Regex regex = new Regex("\"[^\"]*\"");
             appPath = regex.Match(app).ToString();
-            MessageBox.Show(appPath);
         }
 
         public Main()
