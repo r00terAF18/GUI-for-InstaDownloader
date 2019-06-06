@@ -21,9 +21,7 @@ namespace InstaDownlaoder
 
         private void checkApp()
         {
-            char[] toTrim = "\"".ToCharArray();
-            string app = appPath.Trim(toTrim);
-            if (File.Exists(app))
+            if (File.Exists(appPath))
             {
 
             }
@@ -71,22 +69,45 @@ namespace InstaDownlaoder
             sw.Close();
         }
 
+        private void instaConsole()
+        {
+            try
+            {
+                StreamReader sw = new StreamReader(settings);
+                string theme = sw.ReadLine();
+                string app = sw.ReadLine();
+                sw.Close();
+                Regex regex = new Regex("\"[^\"]*\"");
+                char[] toTrim = "\"".ToCharArray();
+                appPath = regex.Match(app).ToString().Trim(toTrim);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void readSave()
         {
-            StreamReader sw = new StreamReader(settings);
-            string theme = sw.ReadLine();
-            string app = sw.ReadLine();
-            sw.Close();
-            if (theme.Equals("Theme = \"Dark\""))
+            try
             {
-                EnableDarkTheme();
+                StreamReader sw = new StreamReader(settings);
+                string theme = sw.ReadLine();
+                string app = sw.ReadLine();
+                sw.Close();
+                if (theme.Equals("Theme = \"Dark\""))
+                {
+                    EnableDarkTheme();
+                }
+                else if (theme.Equals("Theme = \"Light\""))
+                {
+                    EnableLightTheme();
+                }
             }
-            else if (theme.Equals("Theme = \"Light\""))
+            catch (Exception ex)
             {
-                EnableLightTheme();
+                MessageBox.Show(ex.Message);
             }
-            Regex regex = new Regex("\"[^\"]*\"");
-            appPath = regex.Match(app).ToString();
         }
 
         public Main()
@@ -183,6 +204,7 @@ namespace InstaDownlaoder
         private void Main_Load(object sender, EventArgs e)
         {
             checkForSettingsFile();
+            instaConsole();
             readSave();
             checkApp();
             mainPanel.Visible = true;

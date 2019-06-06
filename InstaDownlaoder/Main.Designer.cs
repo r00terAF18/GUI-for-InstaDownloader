@@ -291,6 +291,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Instagram Downloader - @AmirRoohi2K";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panelSettings.ResumeLayout(false);
             this.panelSettings.PerformLayout();
             this.mainPanel.ResumeLayout(false);
