@@ -54,29 +54,22 @@ namespace InstaDownlaoder
         private void readSave()
         {
             StreamReader sw = new StreamReader(settings);
-            if (sw.ReadLine().Equals("Theme = \"Dark\""))
+            string check = "";
+            while ((check = sw.ReadLine()) != null)
             {
-                EnableDarkTheme();
-            }
-            else if (sw.ReadLine().Equals("Theme = \"Light\""))
-            {
-                EnableLightTheme();
-            }
-            else
-            {
+                if (check.Equals("Theme = \"Dark\""))
+                {
+                    EnableDarkTheme();
+                }
+                else if (check.Equals("Theme = \"Light\""))
+                {
+                    EnableLightTheme();
+                }
+                else
+                {
 
+                }
             }
-            //while (sw.ReadLine() != null)
-            //{
-            //    if (sw.Read().Equals("Theme = \"Dark\""))
-            //    {
-            //        EnableDarkTheme();
-            //    }
-            //    else if (sw.ReadLine().Equals("Theme = \"Light\""))
-            //    {
-            //        EnableLightTheme();
-            //    }
-            //}
             sw.Close();
         }
 
@@ -100,6 +93,7 @@ namespace InstaDownlaoder
             this.BackColor = Color.FromArgb(45, 45, 48);
             btnHome.BackColor = Color.FromArgb(45, 45, 48);
             btnSettings.BackColor = Color.FromArgb(45, 45, 48);
+            rdnBtnDark.Checked = true;
         }
 
         private void EnableLightTheme()
@@ -107,6 +101,7 @@ namespace InstaDownlaoder
             this.BackColor = Color.White;
             btnHome.BackColor = Color.White;
             btnSettings.BackColor = Color.White;
+            rdnBtnLight.Checked = true;
         }
 
         private void Main_Load(object sender, EventArgs e)
