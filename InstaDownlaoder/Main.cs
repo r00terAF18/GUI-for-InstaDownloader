@@ -21,52 +21,73 @@ namespace InstaDownlaoder
 
         private void checkApp()
         {
-            if (File.Exists(appPath))
+            try
             {
-
-            }
-            else
-            {
-                MessageBox.Show("Looks like my apps are not in the same directory, that is ok, just tell me where it is!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                OpenFileDialog findApp = new OpenFileDialog();
-                if (DialogResult.OK == findApp.ShowDialog())
+                if (File.Exists(appPath))
                 {
-                    appPath = Path.GetFullPath(findApp.FileName);
-                    writeSave();
+
                 }
                 else
                 {
-                    this.Close();
+                    MessageBox.Show("Looks like my apps are not in the same directory, that is ok, just tell me where it is!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    OpenFileDialog findApp = new OpenFileDialog();
+                    if (DialogResult.OK == findApp.ShowDialog())
+                    {
+                        appPath = Path.GetFullPath(findApp.FileName);
+                        writeSave();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void checkForSettingsFile()
         {
-            if (!File.Exists(settings))
+            try
             {
-                File.Create(settings);
-            }
-            else
-            {
+                if (!File.Exists(settings))
+                {
+                    File.Create(settings);
+                }
+                else
+                {
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void writeSave()
         {
-            StreamWriter sw = new StreamWriter(settings);
-            string stringToWrite = "";
-            if (dark)
+            try
             {
-                stringToWrite = "Theme = \"Dark\"\nApp Path = \""+ appPath +"\"";
+                StreamWriter sw = new StreamWriter(settings);
+                string stringToWrite = "";
+                if (dark)
+                {
+                    stringToWrite = "Theme = \"Dark\"\nApp Path = \"" + appPath + "\"";
+                }
+                else if (light)
+                {
+                    stringToWrite = "Theme = \"Light\"\nApp Path = \"" + appPath + "\"";
+                }
+                sw.Write(stringToWrite);
+                sw.Close();
             }
-            else if (light)
+            catch (Exception ex)
             {
-                stringToWrite = "Theme = \"Light\"\nApp Path = \"" + appPath + "\"";
+                MessageBox.Show(ex.Message);
             }
-            sw.Write(stringToWrite);
-            sw.Close();
         }
 
         private void instaConsole()
@@ -117,14 +138,28 @@ namespace InstaDownlaoder
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            panelSettings.Visible = false;
-            mainPanel.Visible = true;
+            try
+            {
+                panelSettings.Visible = false;
+                mainPanel.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
-            panelSettings.Visible = true;
-            mainPanel.Visible = false;
+            try
+            {
+                panelSettings.Visible = true;
+                mainPanel.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void EnableDarkTheme()
@@ -212,54 +247,111 @@ namespace InstaDownlaoder
 
         private void BtnTwitter_Click(object sender, EventArgs e)
         {
-            Process.Start("https://twitter.com/AmirRoohi2K");
+            try
+            {
+                Process.Start("https://twitter.com/AmirRoohi2K");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnInstagram_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.instagram.com/hello_worldfromcs/");
+            try
+            {
+                Process.Start("https://www.instagram.com/hello_worldfromcs/");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnGitHub_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/AmirRoohi2000");
+            try
+            {
+                Process.Start("https://github.com/AmirRoohi2000");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void RdnBtnLight_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdnBtnDark.Checked)
+            try
             {
-                EnableDarkTheme();
-                dark = true;
-                light = false;
+                if (rdnBtnDark.Checked)
+                {
+                    EnableDarkTheme();
+                    dark = true;
+                    light = false;
+                }
+                else if (rdnBtnLight.Checked)
+                {
+                    EnableLightTheme();
+                    light = true;
+                    dark = false;
+                }
             }
-            else if (rdnBtnLight.Checked)
+            catch (Exception ex)
             {
-                EnableLightTheme();
-                light = true;
-                dark = false;
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void TxtUrl_DragEnter(object sender, DragEventArgs e)
         {
-            e.Effect = DragDropEffects.All;
-            txtUrl.Text = e.Data.GetData(DataFormats.Text).ToString();
+            try
+            {
+                e.Effect = DragDropEffects.All;
+                txtUrl.Text = e.Data.GetData(DataFormats.Text).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BtnDownload_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (checkBoxQuit.Checked && checkBoxVerbose.Checked)
+                {
+                    MessageBox.Show("Either Quit or Verbose or none, but not both!", "Please note!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void RdnBtnDark_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdnBtnDark.Checked)
+            try
             {
-                EnableDarkTheme();
-                dark = true;
-                light = false;
+                if (rdnBtnDark.Checked)
+                {
+                    EnableDarkTheme();
+                    dark = true;
+                    light = false;
+                }
+                else if (rdnBtnLight.Checked)
+                {
+                    EnableLightTheme();
+                    light = true;
+                    dark = false;
+                }
             }
-            else if (rdnBtnLight.Checked)
+            catch (Exception ex)
             {
-                EnableLightTheme();
-                light = true;
-                dark = false;
+                MessageBox.Show(ex.Message);
             }
         }
     }
