@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace InstaDownlaoder
 {
@@ -82,6 +83,9 @@ namespace InstaDownlaoder
             this.BackColor = Color.FromArgb(45, 45, 48);
             btnHome.BackColor = Color.FromArgb(45, 45, 48);
             btnSettings.BackColor = Color.FromArgb(45, 45, 48);
+            btnGitHub.BackColor = Color.FromArgb(45, 45, 48);
+            btnInstagram.BackColor = Color.FromArgb(45, 45, 48);
+            btnTwitter.BackColor = Color.FromArgb(45, 45, 48);
             rdnBtnDark.Checked = true;
             writeSave();
         }
@@ -91,6 +95,9 @@ namespace InstaDownlaoder
             this.BackColor = Color.White;
             btnHome.BackColor = Color.White;
             btnSettings.BackColor = Color.White;
+            btnTwitter.BackColor = Color.White;
+            btnInstagram.BackColor = Color.White;
+            btnGitHub.BackColor = Color.White;
             rdnBtnLight.Checked = true;
             writeSave();
         }
@@ -99,6 +106,21 @@ namespace InstaDownlaoder
         {
             checkForSettingsFile();
             readSave();
+        }
+
+        private void BtnTwitter_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://twitter.com/AmirRoohi2K");
+        }
+
+        private void BtnInstagram_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.instagram.com/hello_worldfromcs/");
+        }
+
+        private void BtnGitHub_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/AmirRoohi2000");
         }
 
         private void RdnBtnLight_CheckedChanged(object sender, EventArgs e)

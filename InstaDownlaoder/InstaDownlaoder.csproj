@@ -91,5 +91,14 @@
     <None Include="Images\Settings.png" />
     <None Include="Images\Home.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\twitter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

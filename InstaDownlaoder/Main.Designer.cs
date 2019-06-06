@@ -29,14 +29,116 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.panelSettings = new System.Windows.Forms.Panel();
             this.rdnBtnLight = new System.Windows.Forms.RadioButton();
             this.rdnBtnDark = new System.Windows.Forms.RadioButton();
             this.Theme = new System.Windows.Forms.Label();
+            this.btnTwitter = new System.Windows.Forms.Button();
+            this.btnInstagram = new System.Windows.Forms.Button();
+            this.btnGitHub = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSettings.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelSettings
+            // 
+            this.panelSettings.Controls.Add(this.label1);
+            this.panelSettings.Controls.Add(this.btnTwitter);
+            this.panelSettings.Controls.Add(this.btnInstagram);
+            this.panelSettings.Controls.Add(this.btnGitHub);
+            this.panelSettings.Controls.Add(this.rdnBtnLight);
+            this.panelSettings.Controls.Add(this.rdnBtnDark);
+            this.panelSettings.Controls.Add(this.Theme);
+            this.panelSettings.ForeColor = System.Drawing.Color.Magenta;
+            this.panelSettings.Location = new System.Drawing.Point(145, 12);
+            this.panelSettings.Name = "panelSettings";
+            this.panelSettings.Size = new System.Drawing.Size(512, 205);
+            this.panelSettings.TabIndex = 3;
+            this.panelSettings.Visible = false;
+            // 
+            // rdnBtnLight
+            // 
+            this.rdnBtnLight.AutoSize = true;
+            this.rdnBtnLight.ForeColor = System.Drawing.Color.Orchid;
+            this.rdnBtnLight.Location = new System.Drawing.Point(281, 13);
+            this.rdnBtnLight.Name = "rdnBtnLight";
+            this.rdnBtnLight.Size = new System.Drawing.Size(66, 25);
+            this.rdnBtnLight.TabIndex = 2;
+            this.rdnBtnLight.Text = "Light";
+            this.rdnBtnLight.UseVisualStyleBackColor = true;
+            this.rdnBtnLight.CheckedChanged += new System.EventHandler(this.RdnBtnLight_CheckedChanged);
+            // 
+            // rdnBtnDark
+            // 
+            this.rdnBtnDark.AutoSize = true;
+            this.rdnBtnDark.ForeColor = System.Drawing.Color.Orchid;
+            this.rdnBtnDark.Location = new System.Drawing.Point(195, 13);
+            this.rdnBtnDark.Name = "rdnBtnDark";
+            this.rdnBtnDark.Size = new System.Drawing.Size(64, 25);
+            this.rdnBtnDark.TabIndex = 1;
+            this.rdnBtnDark.Text = "Dark";
+            this.rdnBtnDark.UseVisualStyleBackColor = true;
+            this.rdnBtnDark.CheckedChanged += new System.EventHandler(this.RdnBtnDark_CheckedChanged);
+            // 
+            // Theme
+            // 
+            this.Theme.AutoSize = true;
+            this.Theme.ForeColor = System.Drawing.Color.Orchid;
+            this.Theme.Location = new System.Drawing.Point(19, 17);
+            this.Theme.Name = "Theme";
+            this.Theme.Size = new System.Drawing.Size(61, 21);
+            this.Theme.TabIndex = 0;
+            this.Theme.Text = "Theme";
+            // 
+            // btnTwitter
+            // 
+            this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTwitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnTwitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTwitter.Image = global::InstaDownlaoder.Properties.Resources.twitter;
+            this.btnTwitter.Location = new System.Drawing.Point(301, 81);
+            this.btnTwitter.Name = "btnTwitter";
+            this.btnTwitter.Size = new System.Drawing.Size(45, 42);
+            this.btnTwitter.TabIndex = 6;
+            this.btnTwitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTwitter.UseVisualStyleBackColor = false;
+            this.btnTwitter.Click += new System.EventHandler(this.BtnTwitter_Click);
+            // 
+            // btnInstagram
+            // 
+            this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnInstagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnInstagram.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstagram.Image = global::InstaDownlaoder.Properties.Resources.instagram;
+            this.btnInstagram.Location = new System.Drawing.Point(246, 81);
+            this.btnInstagram.Name = "btnInstagram";
+            this.btnInstagram.Size = new System.Drawing.Size(45, 42);
+            this.btnInstagram.TabIndex = 5;
+            this.btnInstagram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInstagram.UseVisualStyleBackColor = false;
+            this.btnInstagram.Click += new System.EventHandler(this.BtnInstagram_Click);
+            // 
+            // btnGitHub
+            // 
+            this.btnGitHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnGitHub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGitHub.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnGitHub.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGitHub.Image = global::InstaDownlaoder.Properties.Resources.Github;
+            this.btnGitHub.Location = new System.Drawing.Point(195, 81);
+            this.btnGitHub.Name = "btnGitHub";
+            this.btnGitHub.Size = new System.Drawing.Size(45, 42);
+            this.btnGitHub.TabIndex = 4;
+            this.btnGitHub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGitHub.UseVisualStyleBackColor = false;
+            this.btnGitHub.Click += new System.EventHandler(this.BtnGitHub_Click);
             // 
             // btnHome
             // 
@@ -68,51 +170,15 @@
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
-            // panelSettings
+            // label1
             // 
-            this.panelSettings.Controls.Add(this.rdnBtnLight);
-            this.panelSettings.Controls.Add(this.rdnBtnDark);
-            this.panelSettings.Controls.Add(this.Theme);
-            this.panelSettings.ForeColor = System.Drawing.Color.Magenta;
-            this.panelSettings.Location = new System.Drawing.Point(145, 12);
-            this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(512, 205);
-            this.panelSettings.TabIndex = 3;
-            this.panelSettings.Visible = false;
-            // 
-            // rdnBtnLight
-            // 
-            this.rdnBtnLight.AutoSize = true;
-            this.rdnBtnLight.ForeColor = System.Drawing.Color.Orchid;
-            this.rdnBtnLight.Location = new System.Drawing.Point(196, 17);
-            this.rdnBtnLight.Name = "rdnBtnLight";
-            this.rdnBtnLight.Size = new System.Drawing.Size(66, 25);
-            this.rdnBtnLight.TabIndex = 2;
-            this.rdnBtnLight.Text = "Light";
-            this.rdnBtnLight.UseVisualStyleBackColor = true;
-            this.rdnBtnLight.CheckedChanged += new System.EventHandler(this.RdnBtnLight_CheckedChanged);
-            // 
-            // rdnBtnDark
-            // 
-            this.rdnBtnDark.AutoSize = true;
-            this.rdnBtnDark.ForeColor = System.Drawing.Color.Orchid;
-            this.rdnBtnDark.Location = new System.Drawing.Point(110, 17);
-            this.rdnBtnDark.Name = "rdnBtnDark";
-            this.rdnBtnDark.Size = new System.Drawing.Size(64, 25);
-            this.rdnBtnDark.TabIndex = 1;
-            this.rdnBtnDark.Text = "Dark";
-            this.rdnBtnDark.UseVisualStyleBackColor = true;
-            this.rdnBtnDark.CheckedChanged += new System.EventHandler(this.RdnBtnDark_CheckedChanged);
-            // 
-            // Theme
-            // 
-            this.Theme.AutoSize = true;
-            this.Theme.ForeColor = System.Drawing.Color.Orchid;
-            this.Theme.Location = new System.Drawing.Point(19, 17);
-            this.Theme.Name = "Theme";
-            this.Theme.Size = new System.Drawing.Size(61, 21);
-            this.Theme.TabIndex = 0;
-            this.Theme.Text = "Theme";
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Orchid;
+            this.label1.Location = new System.Drawing.Point(19, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 21);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "My social media";
             // 
             // Main
             // 
@@ -137,11 +203,15 @@
 
         #endregion
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Panel panelSettings;
         private System.Windows.Forms.Label Theme;
         private System.Windows.Forms.RadioButton rdnBtnLight;
         private System.Windows.Forms.RadioButton rdnBtnDark;
+        private System.Windows.Forms.Button btnGitHub;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnInstagram;
+        private System.Windows.Forms.Button btnTwitter;
+        private System.Windows.Forms.Label label1;
     }
 }
 
