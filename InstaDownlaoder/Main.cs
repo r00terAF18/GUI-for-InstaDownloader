@@ -34,30 +34,37 @@ namespace InstaDownlaoder
         private void writeSave()
         {
             StreamWriter sw = new StreamWriter(settings);
+            string stringToWrite = "";
             if (dark)
             {
-                string stringToWrite = "Theme = \"Dark\"";
-                sw.Write(stringToWrite);
-                sw.Close();
+                stringToWrite = "Theme = \"Dark\"";
             }
             else if (light)
             {
-                string stringToWrite = "Theme = \"Light\"";
-                sw.Write(stringToWrite);
-                sw.Close();
+                stringToWrite = "Theme = \"Light\"";
             }
+            else
+            {
+
+            }
+            sw.Write(stringToWrite);
+            sw.Close();
         }
 
         private void readSave()
         {
             StreamReader sw = new StreamReader(settings);
-            if (sw.Read().Equals("Theme = \"Dark\""))
+            if (sw.ReadLine().Equals("Theme = \"Dark\""))
             {
                 EnableDarkTheme();
             }
             else if (sw.ReadLine().Equals("Theme = \"Light\""))
             {
                 EnableLightTheme();
+            }
+            else
+            {
+
             }
             //while (sw.ReadLine() != null)
             //{
@@ -75,9 +82,7 @@ namespace InstaDownlaoder
 
         public Main()
         {
-            checkForSettingsFile();
             InitializeComponent();
-            readSave();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
@@ -102,6 +107,12 @@ namespace InstaDownlaoder
             this.BackColor = Color.White;
             btnHome.BackColor = Color.White;
             btnSettings.BackColor = Color.White;
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            checkForSettingsFile();
+            readSave();
         }
 
         private void RdnBtnLight_CheckedChanged(object sender, EventArgs e)
