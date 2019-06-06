@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace InstaDownlaoder
 {
@@ -17,11 +18,11 @@ namespace InstaDownlaoder
 
         bool light, dark;
         string settings = @"C:/Users/" + Environment.UserName + @"/AppData/Local/insta.config";
-        public string appPath = "instaDownloader_console.exe";
+        public string appPath = "";
 
         private void checkApp()
         {
-            if (File.Exists(appPath))
+            if (File.Exists("instaDownloader_console.exe"))
             {
 
             }
@@ -32,6 +33,10 @@ namespace InstaDownlaoder
                 if (DialogResult.OK == findApp.ShowDialog())
                 {
                     appPath = Path.GetFullPath(findApp.FileName);
+                }
+                else
+                {
+                    this.Close();
                 }
             }
         }
@@ -67,16 +72,20 @@ namespace InstaDownlaoder
         private void readSave()
         {
             StreamReader sw = new StreamReader(settings);
-            string check = sw.ReadLine();
+            string theme = sw.ReadLine();
+            string app = sw.ReadLine();
             sw.Close();
-            if (check.Equals("Theme = \"Dark\""))
+            if (theme.Equals("Theme = \"Dark\""))
             {
                 EnableDarkTheme();
             }
-            else if (check.Equals("Theme = \"Light\""))
+            else if (theme.Equals("Theme = \"Light\""))
             {
                 EnableLightTheme();
             }
+            Regex regex = new Regex("\"[^\"]*\"");
+            appPath = regex.Match(app).ToString();
+            MessageBox.Show(appPath);
         }
 
         public Main()
