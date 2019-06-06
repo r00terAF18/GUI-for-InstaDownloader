@@ -83,17 +83,20 @@
             // rdnBtnLight
             // 
             this.rdnBtnLight.AutoSize = true;
+            this.rdnBtnLight.ForeColor = System.Drawing.Color.Orchid;
             this.rdnBtnLight.Location = new System.Drawing.Point(196, 17);
             this.rdnBtnLight.Name = "rdnBtnLight";
             this.rdnBtnLight.Size = new System.Drawing.Size(66, 25);
             this.rdnBtnLight.TabIndex = 2;
             this.rdnBtnLight.Text = "Light";
             this.rdnBtnLight.UseVisualStyleBackColor = true;
+            this.rdnBtnLight.CheckedChanged += new System.EventHandler(this.RdnBtnLight_CheckedChanged);
             // 
             // rdnBtnDark
             // 
             this.rdnBtnDark.AutoSize = true;
             this.rdnBtnDark.Checked = true;
+            this.rdnBtnDark.ForeColor = System.Drawing.Color.Orchid;
             this.rdnBtnDark.Location = new System.Drawing.Point(110, 17);
             this.rdnBtnDark.Name = "rdnBtnDark";
             this.rdnBtnDark.Size = new System.Drawing.Size(64, 25);
@@ -101,10 +104,12 @@
             this.rdnBtnDark.TabStop = true;
             this.rdnBtnDark.Text = "Dark";
             this.rdnBtnDark.UseVisualStyleBackColor = true;
+            this.rdnBtnDark.CheckedChanged += new System.EventHandler(this.RdnBtnDark_CheckedChanged);
             // 
             // Theme
             // 
             this.Theme.AutoSize = true;
+            this.Theme.ForeColor = System.Drawing.Color.Orchid;
             this.Theme.Location = new System.Drawing.Point(19, 17);
             this.Theme.Name = "Theme";
             this.Theme.Size = new System.Drawing.Size(61, 21);
