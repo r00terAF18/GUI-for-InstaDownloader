@@ -31,14 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelSettings = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTwitter = new System.Windows.Forms.Button();
-            this.btnInstagram = new System.Windows.Forms.Button();
-            this.btnGitHub = new System.Windows.Forms.Button();
             this.rdnBtnLight = new System.Windows.Forms.RadioButton();
             this.rdnBtnDark = new System.Windows.Forms.RadioButton();
             this.Theme = new System.Windows.Forms.Label();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.checkBoxVerbose = new System.Windows.Forms.CheckBox();
             this.checkBoxQuit = new System.Windows.Forms.CheckBox();
@@ -47,6 +42,11 @@
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnTwitter = new System.Windows.Forms.Button();
+            this.btnInstagram = new System.Windows.Forms.Button();
+            this.btnGitHub = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.panelSettings.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -76,54 +76,6 @@
             this.label1.Size = new System.Drawing.Size(132, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "My social media";
-            // 
-            // btnTwitter
-            // 
-            this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnTwitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnTwitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwitter.Image = global::InstaDownlaoder.Properties.Resources.twitter;
-            this.btnTwitter.Location = new System.Drawing.Point(301, 81);
-            this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(45, 42);
-            this.btnTwitter.TabIndex = 6;
-            this.btnTwitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTwitter.UseVisualStyleBackColor = false;
-            this.btnTwitter.Click += new System.EventHandler(this.BtnTwitter_Click);
-            // 
-            // btnInstagram
-            // 
-            this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnInstagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnInstagram.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstagram.Image = global::InstaDownlaoder.Properties.Resources.instagram;
-            this.btnInstagram.Location = new System.Drawing.Point(246, 81);
-            this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(45, 42);
-            this.btnInstagram.TabIndex = 5;
-            this.btnInstagram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnInstagram.UseVisualStyleBackColor = false;
-            this.btnInstagram.Click += new System.EventHandler(this.BtnInstagram_Click);
-            // 
-            // btnGitHub
-            // 
-            this.btnGitHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnGitHub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnGitHub.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnGitHub.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGitHub.Image = global::InstaDownlaoder.Properties.Resources.Github;
-            this.btnGitHub.Location = new System.Drawing.Point(195, 81);
-            this.btnGitHub.Name = "btnGitHub";
-            this.btnGitHub.Size = new System.Drawing.Size(45, 42);
-            this.btnGitHub.TabIndex = 4;
-            this.btnGitHub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnGitHub.UseVisualStyleBackColor = false;
-            this.btnGitHub.Click += new System.EventHandler(this.BtnGitHub_Click);
             // 
             // rdnBtnLight
             // 
@@ -159,36 +111,6 @@
             this.Theme.TabIndex = 0;
             this.Theme.Text = "Theme";
             // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(12, 12);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(127, 94);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(12, 123);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(127, 94);
-            this.btnSettings.TabIndex = 2;
-            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
-            // 
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.checkBoxVerbose);
@@ -203,7 +125,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(512, 205);
             this.mainPanel.TabIndex = 8;
-            this.mainPanel.Visible = false;
             // 
             // checkBoxVerbose
             // 
@@ -274,6 +195,84 @@
             this.label2.Size = new System.Drawing.Size(47, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "URL";
+            // 
+            // btnTwitter
+            // 
+            this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTwitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnTwitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTwitter.Image = global::InstaDownlaoder.Properties.Resources.twitter;
+            this.btnTwitter.Location = new System.Drawing.Point(301, 81);
+            this.btnTwitter.Name = "btnTwitter";
+            this.btnTwitter.Size = new System.Drawing.Size(45, 42);
+            this.btnTwitter.TabIndex = 6;
+            this.btnTwitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTwitter.UseVisualStyleBackColor = false;
+            this.btnTwitter.Click += new System.EventHandler(this.BtnTwitter_Click);
+            // 
+            // btnInstagram
+            // 
+            this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnInstagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnInstagram.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstagram.Image = global::InstaDownlaoder.Properties.Resources.instagram;
+            this.btnInstagram.Location = new System.Drawing.Point(246, 81);
+            this.btnInstagram.Name = "btnInstagram";
+            this.btnInstagram.Size = new System.Drawing.Size(45, 42);
+            this.btnInstagram.TabIndex = 5;
+            this.btnInstagram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInstagram.UseVisualStyleBackColor = false;
+            this.btnInstagram.Click += new System.EventHandler(this.BtnInstagram_Click);
+            // 
+            // btnGitHub
+            // 
+            this.btnGitHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnGitHub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGitHub.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnGitHub.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGitHub.Image = global::InstaDownlaoder.Properties.Resources.Github;
+            this.btnGitHub.Location = new System.Drawing.Point(195, 81);
+            this.btnGitHub.Name = "btnGitHub";
+            this.btnGitHub.Size = new System.Drawing.Size(45, 42);
+            this.btnGitHub.TabIndex = 4;
+            this.btnGitHub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGitHub.UseVisualStyleBackColor = false;
+            this.btnGitHub.Click += new System.EventHandler(this.BtnGitHub_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Image = global::InstaDownlaoder.Properties.Resources.Home;
+            this.btnHome.Location = new System.Drawing.Point(12, 12);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(127, 94);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Image = global::InstaDownlaoder.Properties.Resources.Settings;
+            this.btnSettings.Location = new System.Drawing.Point(12, 123);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(127, 94);
+            this.btnSettings.TabIndex = 2;
+            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // Main
             // 

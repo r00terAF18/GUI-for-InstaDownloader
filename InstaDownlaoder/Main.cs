@@ -15,7 +15,6 @@ namespace InstaDownlaoder
 {
     public partial class Main : Form
     {
-
         bool light, dark;
         public string settings = @"C:/Users/" + Environment.UserName + @"/AppData/Local/insta.config";
         public string appPath;
