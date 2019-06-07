@@ -11,16 +11,25 @@
     <WorkingDirectory>.</WorkingDirectory>
     <IsWindowsApplication>True</IsWindowsApplication>
     <AssemblyName>AI Setup Project1</AssemblyName>
-    <Name>AI Setup Project1</Name>
+    <Name>Instagram Downloader Setup</Name>
     <RootNamespace>AI Setup Project1</RootNamespace>
     <LoadFromTemplate>
     </LoadFromTemplate>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
   <ItemGroup>
-    <Compile Include="AI Setup Project1.aip">
+    <Compile Include="Instagram Downloader Setup.aip">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InstaDownlaoder\InstaDownlaoder.csproj">
+      <Name>InstaDownlaoder</Name>
+      <Project>{b86cfb3f-d533-4d69-b412-a3ab76308164}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput</OutputsToImport>
+      <CreateShortcut>False</CreateShortcut>
+    </ProjectReference>
   </ItemGroup>
   <Target Name="Build">
     <Error Text="This project requires Advanced Installer tool. Please download it from https://www.advancedinstaller.com/download.html" />
