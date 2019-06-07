@@ -385,7 +385,7 @@
         "UpgradeCode" = "8:{7FB758C7-4881-4338-9B5B-BBD89945EEC8}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
@@ -930,7 +930,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5FC86933145745908EA0EF046C57C4D1"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\InstaDownlaoder\\obj\\Debug\\InstaDownlaoder.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C41132A4EBD244C890AB9585A52080E3"
