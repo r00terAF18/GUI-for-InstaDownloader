@@ -28,7 +28,7 @@
         "Entry"
         {
         "MsmKey" = "8:_1B6992E3AE0833D43D2788254574097B"
-        "OwnerKey" = "8:_B6A073D7D52F49FA944706110BB4DB46"
+        "OwnerKey" = "8:_5FC86933145745908EA0EF046C57C4D1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5FC86933145745908EA0EF046C57C4D1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5FDD0BD20F2F4D12AF13C25A1B43E5BA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_778BFF5367E64900A41BE083236457F7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B6A073D7D52F49FA944706110BB4DB46"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B6A073D7D52F49FA944706110BB4DB46"
+        "OwnerKey" = "8:_5FC86933145745908EA0EF046C57C4D1"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -509,7 +509,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_B6A073D7D52F49FA944706110BB4DB46"
+            "Target" = "8:"
             "Folder" = "8:_CE617619FF544B70A6B43C4597E0FB1D"
             "WorkingFolder" = "8:_C41132A4EBD244C890AB9585A52080E3"
             "Icon" = "8:"
@@ -523,7 +523,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_B6A073D7D52F49FA944706110BB4DB46"
+            "Target" = "8:"
             "Folder" = "8:_4F2F456082C348AC81F8DC8CDDCB461F"
             "WorkingFolder" = "8:_C41132A4EBD244C890AB9585A52080E3"
             "Icon" = "8:"
@@ -928,9 +928,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B6A073D7D52F49FA944706110BB4DB46"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5FC86933145745908EA0EF046C57C4D1"
             {
-            "SourcePath" = "8:..\\InstaDownlaoder\\obj\\Release\\InstaDownlaoder.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C41132A4EBD244C890AB9585A52080E3"
@@ -948,7 +948,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Release|Any CPU"
+            "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{B86CFB3F-D533-4D69-B412-A3AB76308164}"
             "ShowKeyOutput" = "11:TRUE"
