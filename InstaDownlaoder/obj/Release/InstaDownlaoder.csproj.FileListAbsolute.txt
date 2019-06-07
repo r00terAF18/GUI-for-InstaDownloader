@@ -1,0 +1,10 @@
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\bin\Release\InstaDownlaoder.exe.config
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\bin\Release\InstaDownlaoder.exe
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\bin\Release\InstaDownlaoder.pdb
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Release\InstaDownlaoder.csprojAssemblyReference.cache
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Release\InstaDownlaoder.Main.resources
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Release\InstaDownlaoder.Properties.Resources.resources
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Release\InstaDownlaoder.csproj.GenerateResource.cache
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Release\InstaDownlaoder.csproj.CoreCompileInputs.cache
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Release\InstaDownlaoder.exe
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Release\InstaDownlaoder.pdb
