@@ -1,2 +1,0 @@
-C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\Instagram Downloader Setup\bin\Debug\Instagram_Downloader_Setup.msi
-C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\Instagram Downloader Setup\bin\Debug\Instagram_Downloader_Setup.wixpdb

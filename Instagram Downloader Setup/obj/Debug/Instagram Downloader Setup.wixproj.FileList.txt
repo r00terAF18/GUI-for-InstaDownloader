@@ -1,6 +1,0 @@
-C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\Instagram Downloader Setup\bin\Debug\Instagram_Downloader_Setup.msi
-C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\Instagram Downloader Setup\bin\Debug\Instagram_Downloader_Setup.wixpdb
-obj\Debug\Product.wixobj
-obj\Debug\Instagram Downloader Setup.wixproj.BindContentsFileListnull.txt
-obj\Debug\Instagram Downloader Setup.wixproj.BindOutputsFileListnull.txt
-obj\Debug\Instagram Downloader Setup.wixproj.BindBuiltOutputsFileListnull.txt
