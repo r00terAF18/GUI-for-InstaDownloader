@@ -327,20 +327,23 @@ namespace InstaDownlaoder
                 else if (checkBoxQuit.Checked)
                 {
                     argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -q";
+                    Process.Start(appPath, argument);
                 }
                 else if (checkBoxVerbose.Checked)
                 {
                     argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -v";
+                    Process.Start(appPath, argument);
                 }
                 else if (!checkBoxQuit.Checked && !checkBoxVerbose.Checked)
                 {
                     argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\"";
+                    Process.Start(appPath, argument);
                 }
                 else
                 {
 
                 }
-                Process.Start(appPath, argument);
+                
             }
             catch (Exception ex)
             {
