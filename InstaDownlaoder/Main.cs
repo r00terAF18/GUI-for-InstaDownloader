@@ -326,15 +326,15 @@ namespace InstaDownlaoder
                 }
                 else if (checkBoxQuit.Checked)
                 {
-                    argument = "-u " + txtUrl.Text + " -n " + txtName.Text + " -q";
+                    argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -q";
                 }
                 else if (checkBoxVerbose.Checked)
                 {
-                    argument = "-u " + txtUrl.Text + " -n " + txtName.Text + " -v";
+                    argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -v";
                 }
                 else if (!checkBoxQuit.Checked && !checkBoxVerbose.Checked)
                 {
-                    argument = "-u " + txtUrl.Text + " -n " + txtName.Text;
+                    argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\"";
                 }
                 else
                 {
