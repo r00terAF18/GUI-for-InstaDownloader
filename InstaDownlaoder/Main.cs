@@ -320,24 +320,48 @@ namespace InstaDownlaoder
                 {
                     MessageBox.Show("Either Quit or Verbose or none, but not both!", "Please note!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txtUrl.Text.Equals("") || txtName.Text.Equals(""))
+                else if (txtUrl.Text.Equals(""))
                 {
-                    MessageBox.Show("The app needs a URL and a Name!", "Please note!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The app needs a URL, name is no longer needed!", "Please note!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (checkBoxQuit.Checked)
                 {
-                    argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -q";
-                    Process.Start(appPath, argument);
+                    if (txtName.Text.Equals("") || txtName.Text.Equals(" "))
+                    {
+                        argument = "-u \"" + txtUrl.Text + "\" " + " -q";
+                        Process.Start(appPath, argument);
+                    }
+                    else
+                    {
+                        argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -q";
+                        Process.Start(appPath, argument);
+                    }
                 }
                 else if (checkBoxVerbose.Checked)
                 {
-                    argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -v";
-                    Process.Start(appPath, argument);
+                    if (txtName.Text.Equals("") || txtName.Text.Equals(" "))
+                    {
+                        argument = "-u \"" + txtUrl.Text + "\" " + " -v";
+                        Process.Start(appPath, argument);
+                    }
+                    else
+                    {
+                        argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\" -v";
+                        Process.Start(appPath, argument);
+                    }
                 }
                 else if (!checkBoxQuit.Checked && !checkBoxVerbose.Checked)
                 {
-                    argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\"";
-                    Process.Start(appPath, argument);
+                    if (txtName.Text.Equals("") || txtName.Text.Equals(" "))
+                    {
+                        argument = "-u \"" + txtUrl.Text + "\"";
+                        Process.Start(appPath, argument);
+                    }
+                    else
+                    {
+                        argument = "-u \"" + txtUrl.Text + "\" -n \"" + txtName.Text + "\"";
+                        Process.Start(appPath, argument);
+                    }
                 }
                 else
                 {
