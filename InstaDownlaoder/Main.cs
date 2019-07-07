@@ -9,18 +9,22 @@ namespace InstaDownlaoder
 {
     public partial class Main : Form
     {
-        bool light, dark;
+        public bool light, dark;
         public string argument;
         public string settings = @"C:/Users/" + Environment.UserName + @"/AppData/Local/insta.config";
         public string appPath;
+        public string localAppPath = "instaDownloader_console.exe";
 
-        private void checkApp()
+        public StreamWriter streamWriter;
+        public StreamReader streamReader;
+
+        private void checkApp() // 2
         {
             try
             {
-                if (File.Exists(appPath))
+                if (File.Exists(localAppPath))
                 {
-
+                    appPath = localAppPath;
                 }
                 else
                 {
@@ -39,26 +43,47 @@ namespace InstaDownlaoder
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("checkApp();" + ex.Message);
             }
         }
 
-        private void checkForSettingsFile()
+        private void checkForSettingsFile() // 1
         {
             try
             {
                 if (!File.Exists(settings))
                 {
                     File.Create(settings);
+                    GC.Collect();
+                    writeDefault();
                 }
                 else
                 {
-
+                    loadUI();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("checkForSettingsFile();" + ex.Message);
+            }
+        }
+
+        private void writeDefault()
+        {
+            try
+            {
+                streamWriter = new StreamWriter(settings);
+                string defaultSettings = "Theme = \"Dark\"\nApp Path = \"" + localAppPath + "\"";
+                streamWriter.Write(defaultSettings);
+                streamWriter.Close();
+                streamWriter.Dispose();
+                rdnBtnDark.Checked = true;
+                dark = true;
+                EnableDarkTheme();
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
@@ -66,7 +91,7 @@ namespace InstaDownlaoder
         {
             try
             {
-                StreamWriter sw = new StreamWriter(settings);
+                streamWriter = new StreamWriter(settings);
                 string stringToWrite = "";
                 if (dark)
                 {
@@ -76,41 +101,52 @@ namespace InstaDownlaoder
                 {
                     stringToWrite = "Theme = \"Light\"\nApp Path = \"" + appPath + "\"";
                 }
-                sw.Write(stringToWrite);
-                sw.Close();
+                streamWriter.Write(stringToWrite);
+                streamWriter.Close();
+                streamWriter.Dispose();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("writeSave();" + ex.Message);
             }
         }
 
+        /// <summary>
+        /// literarlly no idea why i have this here, or why exactly i need it, but i need it!
+        /// </summary>
         private void instaConsole()
         {
             try
             {
-                StreamReader sw = new StreamReader(settings);
-                string theme = sw.ReadLine();
-                string app = sw.ReadLine();
-                sw.Close();
-                Regex regex = new Regex("\"[^\"]*\"");
-                char[] toTrim = "\"".ToCharArray();
-                appPath = regex.Match(app).ToString().Trim(toTrim);
+                if (appPath != localAppPath)
+                {
+                    StreamReader sw = new StreamReader(settings);
+                    string theme = sw.ReadLine();
+                    string app = sw.ReadLine();
+                    sw.Close();
+                    Regex regex = new Regex("\"[^\"]*\"");
+                    char[] toTrim = "\"".ToCharArray();
+                    appPath = regex.Match(app).ToString().Trim(toTrim);
+                }
+                else
+                {
+
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("instaConsole();" + ex.Message);
             }
         }
 
-        private void readSave()
+        private void loadUI()
         {
             try
             {
-                StreamReader sw = new StreamReader(settings);
-                string theme = sw.ReadLine();
-                string app = sw.ReadLine();
-                sw.Close();
+                streamReader = new StreamReader(settings);
+                string theme = streamReader.ReadLine();
+                streamReader.Close();
+                streamReader.Dispose();
                 if (theme.Equals("Theme = \"Dark\""))
                 {
                     EnableDarkTheme();
@@ -122,13 +158,17 @@ namespace InstaDownlaoder
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("loadUI();" + ex.Message);
             }
         }
 
         public Main()
         {
-            InitializeComponent();
+            InitializeComponent();  // DEFAULT
+
+            checkForSettingsFile();
+            checkApp();
+            instaConsole();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
@@ -138,9 +178,9 @@ namespace InstaDownlaoder
                 panelSettings.Visible = false;
                 mainPanel.Visible = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                throw;
             }
         }
 
@@ -151,9 +191,9 @@ namespace InstaDownlaoder
                 panelSettings.Visible = true;
                 mainPanel.Visible = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                throw;
             }
         }
 
@@ -190,7 +230,7 @@ namespace InstaDownlaoder
             checkBoxQuit.ForeColor = Color.Orchid;
             checkBoxVerbose.ForeColor = Color.Orchid;
 
-            rdnBtnDark.Checked = true;
+            GC.Collect();
             writeSave();
         }
 
@@ -227,17 +267,14 @@ namespace InstaDownlaoder
             checkBoxQuit.ForeColor = Color.Black;
             checkBoxVerbose.ForeColor = Color.Black;
 
-            rdnBtnLight.Checked = true;
+            GC.Collect();
             writeSave();
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            checkForSettingsFile();
-            instaConsole();
-            readSave();
-            checkApp();
             mainPanel.Visible = true;
+            panelSettings.Visible = false;
         }
 
         private void BtnTwitter_Click(object sender, EventArgs e)
@@ -282,20 +319,20 @@ namespace InstaDownlaoder
             {
                 if (rdnBtnDark.Checked)
                 {
-                    EnableDarkTheme();
                     dark = true;
                     light = false;
+                    EnableDarkTheme();
                 }
                 else if (rdnBtnLight.Checked)
                 {
-                    EnableLightTheme();
                     light = true;
                     dark = false;
+                    EnableLightTheme();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                throw;
             }
         }
 
@@ -312,6 +349,11 @@ namespace InstaDownlaoder
             }
         }
 
+        private static string grabClipboard()
+        {
+            return Clipboard.GetText().ToString();
+        }
+
         private void BtnDownload_Click(object sender, EventArgs e)
         {
             try
@@ -320,9 +362,47 @@ namespace InstaDownlaoder
                 {
                     MessageBox.Show("Either Quit or Verbose or none, but not both!", "Please note!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txtUrl.Text.Equals(""))
+                else if (txtUrl.Text.Equals("") || txtUrl.Text.Equals(" "))
                 {
-                    MessageBox.Show("The app needs a URL, name is no longer needed!", "Please note!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (checkBoxQuit.Checked)
+                    {
+                        if (txtName.Text.Equals("") || txtName.Text.Equals(" "))
+                        {
+                            argument = "-u \"" + grabClipboard() + "\" " + " -q";
+                            Process.Start(appPath, argument);
+                        }
+                        else
+                        {
+                            argument = "-u \"" + grabClipboard() + "\" -n \"" + txtName.Text + "\" -q";
+                            Process.Start(appPath, argument);
+                        }
+                    }
+                    else if (checkBoxVerbose.Checked)
+                    {
+                        if (txtName.Text.Equals("") || txtName.Text.Equals(" "))
+                        {
+                            argument = "-u \"" + grabClipboard() + "\" " + " -v";
+                            Process.Start(appPath, argument);
+                        }
+                        else
+                        {
+                            argument = "-u \"" + grabClipboard() + "\" -n \"" + txtName.Text + "\" -v";
+                            Process.Start(appPath, argument);
+                        }
+                    }
+                    else if (!checkBoxQuit.Checked && !checkBoxVerbose.Checked)
+                    {
+                        if (txtName.Text.Equals("") || txtName.Text.Equals(" "))
+                        {
+                            argument = "-u \"" + grabClipboard() + "\"";
+                            Process.Start(appPath, argument);
+                        }
+                        else
+                        {
+                            argument = "-u \"" + grabClipboard() + "\" -n \"" + txtName.Text + "\"";
+                            Process.Start(appPath, argument);
+                        }
+                    }
                 }
                 else if (checkBoxQuit.Checked)
                 {
@@ -381,20 +461,20 @@ namespace InstaDownlaoder
             {
                 if (rdnBtnDark.Checked)
                 {
-                    EnableDarkTheme();
                     dark = true;
                     light = false;
+                    EnableDarkTheme();
                 }
                 else if (rdnBtnLight.Checked)
                 {
-                    EnableLightTheme();
                     light = true;
                     dark = false;
+                    EnableLightTheme();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                throw;
             }
         }
     }
