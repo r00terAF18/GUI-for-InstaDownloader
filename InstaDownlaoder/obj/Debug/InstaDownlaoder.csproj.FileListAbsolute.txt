@@ -52,3 +52,8 @@ C:\Users\ahroo\Documents\Year 2 Programming\GUI-for-InstaDownloader v3\InstaDown
 C:\Users\ahroo\Documents\Year 2 Programming\GUI-for-InstaDownloader v3\InstaDownlaoder\obj\Debug\InstaDownlaoder.application
 C:\Users\ahroo\Documents\Year 2 Programming\GUI-for-InstaDownloader v3\InstaDownlaoder\obj\Debug\InstaDownlaoder.exe
 C:\Users\ahroo\Documents\Year 2 Programming\GUI-for-InstaDownloader v3\InstaDownlaoder\obj\Debug\InstaDownlaoder.pdb
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\bin\Debug\InstaDownlaoder.exe.manifest
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\bin\Debug\InstaDownlaoder.application
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.TrustInfo.xml
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.exe.manifest
+C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.application
