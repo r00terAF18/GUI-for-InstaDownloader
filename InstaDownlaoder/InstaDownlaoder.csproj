@@ -112,7 +112,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>insta.Designer.cs</LastGenOutput>
     </None>
-    <None Include="InstaDownlaoder_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,12 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Github.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\instagram.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\twitter.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

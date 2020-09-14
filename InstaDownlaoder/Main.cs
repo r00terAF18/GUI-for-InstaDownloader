@@ -160,10 +160,6 @@ namespace InstaDownlaoder
             btnSettings.BackColor = Color.FromArgb(45, 45, 48);
             btnGitHub.BackColor = Color.FromArgb(45, 45, 48);
             btnGitHub.FlatAppearance.BorderColor = Color.FromArgb(45, 45, 48);
-            btnInstagram.BackColor = Color.FromArgb(45, 45, 48);
-            btnInstagram.FlatAppearance.BorderColor = Color.FromArgb(45, 45, 48);
-            btnTwitter.BackColor = Color.FromArgb(45, 45, 48);
-            btnTwitter.FlatAppearance.BorderColor = Color.FromArgb(45, 45, 48);
 
             btnDownload.BackColor = Color.FromArgb(45, 45, 48);
             btnDownload.ForeColor = Color.Orchid;
@@ -195,10 +191,6 @@ namespace InstaDownlaoder
             this.BackColor = Color.White;
             btnHome.BackColor = Color.White;
             btnSettings.BackColor = Color.White;
-            btnTwitter.BackColor = Color.White;
-            btnTwitter.FlatAppearance.BorderColor = Color.White;
-            btnInstagram.BackColor = Color.White;
-            btnInstagram.FlatAppearance.BorderColor = Color.White;
             btnGitHub.BackColor = Color.White;
             btnGitHub.FlatAppearance.BorderColor = Color.White;
 
@@ -231,30 +223,6 @@ namespace InstaDownlaoder
         {
             mainPanel.Visible = true;
             panelSettings.Visible = false;
-        }
-
-        private void BtnTwitter_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start("https://twitter.com/AmirRoohi2K");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BtnInstagram_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start("https://www.instagram.com/hello_worldfromcs/");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void BtnGitHub_Click(object sender, EventArgs e)

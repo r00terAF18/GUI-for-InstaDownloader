@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelSettings = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTwitter = new System.Windows.Forms.Button();
-            this.btnInstagram = new System.Windows.Forms.Button();
             this.btnGitHub = new System.Windows.Forms.Button();
             this.rdnBtnLight = new System.Windows.Forms.RadioButton();
             this.rdnBtnDark = new System.Windows.Forms.RadioButton();
@@ -54,8 +52,6 @@
             // panelSettings
             // 
             this.panelSettings.Controls.Add(this.label1);
-            this.panelSettings.Controls.Add(this.btnTwitter);
-            this.panelSettings.Controls.Add(this.btnInstagram);
             this.panelSettings.Controls.Add(this.btnGitHub);
             this.panelSettings.Controls.Add(this.rdnBtnLight);
             this.panelSettings.Controls.Add(this.rdnBtnDark);
@@ -76,38 +72,6 @@
             this.label1.Size = new System.Drawing.Size(132, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "My social media";
-            // 
-            // btnTwitter
-            // 
-            this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnTwitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnTwitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwitter.Image = global::InstaDownlaoder.Properties.Resources.twitter;
-            this.btnTwitter.Location = new System.Drawing.Point(301, 81);
-            this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(45, 42);
-            this.btnTwitter.TabIndex = 6;
-            this.btnTwitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTwitter.UseVisualStyleBackColor = false;
-            this.btnTwitter.Click += new System.EventHandler(this.BtnTwitter_Click);
-            // 
-            // btnInstagram
-            // 
-            this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnInstagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnInstagram.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstagram.Image = global::InstaDownlaoder.Properties.Resources.instagram;
-            this.btnInstagram.Location = new System.Drawing.Point(246, 81);
-            this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(45, 42);
-            this.btnInstagram.TabIndex = 5;
-            this.btnInstagram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnInstagram.UseVisualStyleBackColor = false;
-            this.btnInstagram.Click += new System.EventHandler(this.BtnInstagram_Click);
             // 
             // btnGitHub
             // 
@@ -310,8 +274,6 @@
         private System.Windows.Forms.RadioButton rdnBtnDark;
         private System.Windows.Forms.Button btnGitHub;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnInstagram;
-        private System.Windows.Forms.Button btnTwitter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Label label3;

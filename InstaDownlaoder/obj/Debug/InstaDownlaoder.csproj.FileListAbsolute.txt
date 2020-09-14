@@ -57,3 +57,11 @@ C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\bin\Debu
 C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.TrustInfo.xml
 C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.exe.manifest
 C:\Users\ahroo\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.application
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.csprojAssemblyReference.cache
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.Main.resources
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.csproj.GenerateResource.cache
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.Properties.Resources.resources
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.csproj.CoreCompileInputs.cache
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.TrustInfo.xml
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.exe
+C:\Users\Amir\Documents\GitHub\GUI-for-InstaDownloader\InstaDownlaoder\obj\Debug\InstaDownlaoder.pdb
